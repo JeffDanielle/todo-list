@@ -17,6 +17,7 @@ const FormAdd = ({ handleAdd }) => {
         }
         console.log(newTask)
         handleAdd(newTask)
+        setTask('')
     }
     return (
         <div className="relative lg:left-[41rem] top-15 px-4 py-2 rounded-md text-white">

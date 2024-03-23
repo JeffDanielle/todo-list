@@ -1,8 +1,8 @@
 import Todo from "./Todo"
-const TodoList = ({ todo, onComplete }) => {
+const TodoList = ({ todo, onComplete, handleDelete }) => {
 
     const todosList = todo.map((items) =>
-        <Todo key={items.id} todoProps={items} onComplete={onComplete} />
+        <Todo key={items.id} todoProps={items} onComplete={onComplete} onDelete={handleDelete} />
     )
     return (
         <div className="flex flex-col justify-center items-center">

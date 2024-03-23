@@ -1,5 +1,5 @@
 import trash from "../assets/trash.svg"
-const Todo = ({ todoProps, isCompleted, onComplete }) => {
+const Todo = ({ todoProps, isCompleted, onComplete, onDelete }) => {
     return (
         <li className="mb-4 bg-white rounded-md p-2 flex justify-start">
             <div className="flex items-center w-full justify-between">
@@ -11,7 +11,7 @@ const Todo = ({ todoProps, isCompleted, onComplete }) => {
                     </div>
                 </div>
                 <div>
-                    <button><img src={trash} /></button>
+                    <button onClick={() => onDelete(todoProps.id)}><img src={trash} /></button>
                 </div>
             </div>
 

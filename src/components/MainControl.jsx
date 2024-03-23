@@ -13,6 +13,10 @@ const MainController = () => {
         setTodoTask((items) => items.map((obj) => obj.id === id ? { ...obj, isCompleted: !obj.isCompleted } : obj))
     }
 
+    const handleDeleteTask = (id) => {
+        setTodoTask((items) => items.filter((item) => item.id !== id))
+    }
+
     const handleAddTask = (item) => {
         setTodoTask((items) => [...items, item])
     }
@@ -21,7 +25,7 @@ const MainController = () => {
             <Header />
             <div className='flex flex-col lg:mt-10 h-screen w-screen'>
                 <Form handleAdd={handleAddTask} />
-                <TodoList todo={todoTask} onComplete={handleComplete} />
+                <TodoList todo={todoTask} onComplete={handleComplete} handleDelete={handleDeleteTask} />
             </div>
         </div>
     );
