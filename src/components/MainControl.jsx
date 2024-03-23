@@ -21,7 +21,7 @@ const MainController = () => {
         setTodoTask((items) => [...items, item])
     }
     return (
-        <div className='bg-[#F8F9FF]'>
+        <div className='bg-slate-400'>
             <Header />
             <div className='flex flex-col lg:mt-10 h-screen w-screen'>
                 <Form handleAdd={handleAddTask} />
